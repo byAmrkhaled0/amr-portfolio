@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amr-portfolio-theta-five.vercel.app/sitemap.xml
