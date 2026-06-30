@@ -6,12 +6,16 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://amr-portfolio-theta-five.vercel.app/images/ecosense-frontend-live.webp</image:loc>
-      <image:title>Ecosense AI Project Screenshot</image:title>
+      <image:loc>https://amr-portfolio-theta-five.vercel.app/images/amr-profile-square.webp</image:loc>
+      <image:title>Eng Amr Khaled Portfolio Profile Photo</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://amr-portfolio-theta-five.vercel.app/images/amr-profile-square.webp</image:loc>
-      <image:title>Amr Khaled Abozeid Portfolio Profile</image:title>
+      <image:loc>https://amr-portfolio-theta-five.vercel.app/images/ecosense-frontend-live.webp</image:loc>
+      <image:title>Ecosense AI React Dashboard Screenshot</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://amr-portfolio-theta-five.vercel.app/images/mahmoud-fawzy-science.webp</image:loc>
+      <image:title>Mahmoud Fawzy Science Platform Screenshot</image:title>
     </image:image>
   </url>
   <url>
@@ -19,5 +23,11 @@
     <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amr-portfolio-theta-five.vercel.app/llms.txt</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

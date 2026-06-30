@@ -1,0 +1,11 @@
+# Eng Amr Khaled Portfolio
+
+Eng Amr Khaled is an AI product builder, React front-end developer, and programming/robotics trainer at Tekatech based in Mansoura, Egypt.
+
+Main portfolio: https://amr-portfolio-theta-five.vercel.app/
+Featured work: Ecosense AI, education platforms, business websites, Firebase reviews, React/Vite interfaces, SEO-ready UI, API integration, and IoT/ESP32-CAM hardware workflows.
+
+Important URLs:
+- Homepage: https://amr-portfolio-theta-five.vercel.app/
+- CV: https://amr-portfolio-theta-five.vercel.app/Amr-Khaled-CV.pdf
+- Sitemap: https://amr-portfolio-theta-five.vercel.app/sitemap.xml

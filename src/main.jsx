@@ -182,7 +182,7 @@ function AnimatedCard({className="", children, style}){ return <div className={`
 function BrowserFrame({ image, title, className="", priority=false }){
   return <div className={`browser-frame ${className}`}>
     <div className="browser-top"><span/><span/><span/><small>{title}</small></div>
-    <div className="browser-screen"><img src={image} alt={`${title} website preview`} loading={priority?"eager":"lazy"} width="1100" height="620"/></div>
+    <div className="browser-screen"><img src={image} alt={`${title} website preview`} loading={priority?"eager":"lazy"} decoding="async" fetchPriority={priority?"high":"low"} width="1100" height="620"/></div>
   </div>
 }
 
@@ -540,7 +540,7 @@ function App(){
 
     <header className="nav glass-panel">
       <a className="brand" onClick={()=>goTo("home")} aria-label="Go to home">
-        <img src={profile.logo} alt="Amr Khaled logo" width="40" height="40"/>
+        <img src={profile.logo} alt="Amr Khaled logo" width="40" height="40" decoding="async"/>
         <span>{isAr ? profile.arabicName : profile.name}</span>
       </a>
       <nav className={menuOpen ? "open" : ""}>{t.nav.map((item,index)=><button key={item} onClick={()=>goTo(navIds[index])}>{item}</button>)}</nav>
@@ -584,7 +584,7 @@ function App(){
       <aside className="profile-card premium-3d hero-cinematic hero-3d-stage" aria-label="Developer profile">
         <div className="hero-depth-grid" aria-hidden="true"/>
         <div className="developer-plate tilt-3d">
-          <div className="photo-wrap"><img src={profile.image} alt="Amr Khaled Abozeid" width="720" height="720" fetchPriority="high"/><div className="photo-caption"><img src={profile.logo} alt="logo" width="34" height="34"/><span>AI • Front-End • IoT</span></div></div>
+          <div className="photo-wrap"><img src={profile.image} alt="Eng Amr Khaled profile photo" width="720" height="720" fetchPriority="high" decoding="async"/><div className="photo-caption"><img src={profile.logo} alt="Eng Amr Khaled logo" width="34" height="34" loading="lazy" decoding="async"/><span>AI • Front-End • IoT</span></div></div>
         </div>
         <div className="hero-mini-panel">
           <div><span>{isAr?"واجهة":"Interface"}</span><b>Premium React</b></div>
@@ -717,7 +717,7 @@ function App(){
 
     <section className="section final-cta"><div><MousePointerClick/><h2>{t.finalTitle}</h2><p>{t.finalText}</p></div><a href={whatsappUrl} target="_blank" rel="noreferrer"><Send/>{t.startNow}</a></section>
 
-    <section id="contact" className="section contact"><img className="contact-logo" src={profile.logo} alt="Amr Khaled logo" width="90" height="90"/><h2>{t.contactTitle}</h2><p>{t.contactSubtitle}</p><div className="contact-links"><a href={whatsappUrl} target="_blank" rel="noreferrer"><Phone/>WhatsApp</a><a href={`mailto:${profile.email}`}><Mail/>Email</a><a href={profile.github} target="_blank" rel="noreferrer"><GitHubIcon/>GitHub</a><a href={profile.linkedin} target="_blank" rel="noreferrer"><LinkedInIcon/>LinkedIn</a><a href={profile.facebook} target="_blank" rel="noreferrer"><FacebookIcon/>Facebook</a><a href={profile.instagram} target="_blank" rel="noreferrer"><InstagramIcon/>Instagram</a><a href={profile.tiktok} target="_blank" rel="noreferrer"><TikTokIcon/>TikTok</a></div></section>
+    <section id="contact" className="section contact"><img className="contact-logo" src={profile.logo} alt="Eng Amr Khaled logo" width="90" height="90" loading="lazy" decoding="async"/><h2>{t.contactTitle}</h2><p>{t.contactSubtitle}</p><div className="contact-links"><a href={whatsappUrl} target="_blank" rel="noreferrer"><Phone/>WhatsApp</a><a href={`mailto:${profile.email}`}><Mail/>Email</a><a href={profile.github} target="_blank" rel="noreferrer"><GitHubIcon/>GitHub</a><a href={profile.linkedin} target="_blank" rel="noreferrer"><LinkedInIcon/>LinkedIn</a><a href={profile.facebook} target="_blank" rel="noreferrer"><FacebookIcon/>Facebook</a><a href={profile.instagram} target="_blank" rel="noreferrer"><InstagramIcon/>Instagram</a><a href={profile.tiktok} target="_blank" rel="noreferrer"><TikTokIcon/>TikTok</a></div></section>
 
     {activeProject && <div className="project-modal" role="dialog" aria-modal="true" onClick={()=>setActiveProject(null)}><div className="project-modal-card" onClick={e=>e.stopPropagation()}><button className="modal-close" onClick={()=>{playUiSound("tap");setActiveProject(null)}} aria-label="Close"><X/></button><div className="modal-browser-wrap"><BrowserFrame image={activeProject.image} title={activeProject.title} className="modal-browser-frame" priority/></div><div className="modal-content"><span className="badge"><Layers size={16}/>{activeProject.category}</span><h2>{activeProject.title}</h2><p>{getProjectText(activeProject,isAr,"Description")}</p><div className="modal-case"><div><b>{t.caseLabels[0]}</b><p>{getProjectText(activeProject,isAr,"Problem")}</p></div><div><b>{t.caseLabels[1]}</b><p>{getProjectText(activeProject,isAr,"Solution")}</p></div><div><b>{t.caseLabels[2]}</b><p>{getProjectText(activeProject,isAr,"Result")}</p></div></div><div className="stack">{activeProject.stack.map(item=><b key={item}>{item}</b>)}</div><a className="primary modal-link" href={activeProject.url} target="_blank" rel="noreferrer">{t.visit}<ExternalLink size={17}/></a></div></div></div>}
 

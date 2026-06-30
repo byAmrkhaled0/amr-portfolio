@@ -707,3 +707,17 @@ body[data-theme="dark"]{
   .nav-actions{gap:4px!important;}
   .lang-toggle,.nav .icon-btn,.nav .menu-btn{width:36px!important;height:36px!important;min-width:36px!important;}
 }
+
+
+/* SEO + Speed optimization patch: reduce offscreen rendering cost without changing the visual identity */
+.section:not(.hero){content-visibility:auto;contain-intrinsic-size:820px}
+.browser-frame,.project-card,.profile-card,.reveal-card,.skill-card,.service-card,.review-card,.cert-card,.hardware-card,.choose-card,.process-card{contain:layout paint}
+.browser-screen img,.photo-wrap>img,.contact-logo,.brand img{transform:translateZ(0);backface-visibility:hidden}
+@media(max-width:720px){
+  .section:not(.hero){contain-intrinsic-size:680px}
+  .profile-card,.project-card,.reveal-card,.skill-card,.service-card,.review-card,.cert-card,.hardware-card,.choose-card,.process-card{box-shadow:0 12px 28px rgba(0,0,0,.18)}
+  .photo-caption,.nav,.back-to-top{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+}
+@media(prefers-reduced-data:reduce){
+  .cinematic-marquee,.feature-orbit,.hero-depth-grid{display:none!important}
+}
