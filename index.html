@@ -3,16 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#070b14" />
+    <meta name="theme-color" content="#020712" />
     <meta name="color-scheme" content="dark light" />
+    <script>
+      try {
+        var savedTheme = localStorage.getItem("portfolio-theme") || "dark";
+        if (!["dark", "light"].includes(savedTheme)) savedTheme = "dark";
+        document.documentElement.dataset.theme = savedTheme;
+        document.documentElement.style.colorScheme = savedTheme;
+      } catch (e) {}
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap" />
 
-    <title>Amr Khaled Abozeid | AI Engineer, Front-End Developer & IoT Hardware</title>
-    <meta name="description" content="Portfolio of Amr Khaled Abozeid, an AI Engineer and Front-End Developer building React websites, AI dashboards, backend API integrations, and real IoT hardware projects including Ecosense AI." />
-    <meta name="keywords" content="Amr Khaled, Amr Khaled Abozeid, AI Engineer, Front-End Developer, React Developer, IoT Hardware, ESP32-CAM, Flask API, Ecosense AI, Portfolio, Mansoura Egypt, Sadat University, AWS Cloud Foundations, NLP" />
-    <meta name="author" content="Amr Khaled Abozeid" />
+    <title>Eng Amr Khaled | AI Product Builder, React Developer & Robotics Trainer</title>
+    <meta name="description" content="Creative portfolio of Eng Amr Khaled, an AI product builder, React front-end developer, and programming/robotics trainer at Tekatech creating premium web experiences, AI dashboards, Firebase reviews, SEO-ready interfaces, API integrations, and real IoT hardware projects including Ecosense AI." />
+    <meta name="keywords" content="Amr Khaled, Amr Khaled Abozeid, AI Engineer, Front-End Developer, React Developer, IoT Hardware, ESP32-CAM, Flask API, Ecosense AI, Portfolio, Mansoura Egypt, Sadat University, AWS Cloud Foundations, NLP, Tekatech, Programming Trainer, Robotics Trainer" />
+    <meta name="author" content="Eng Amr Khaled" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="bingbot" content="index, follow" />
@@ -23,23 +31,23 @@
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://amr-portfolio-theta-five.vercel.app/" />
-    <meta property="og:title" content="Amr Khaled Abozeid | AI Engineer & Front-End Developer" />
-    <meta property="og:description" content="React websites, AI dashboards, backend API integration, and real IoT hardware projects." />
+    <meta property="og:title" content="Eng Amr Khaled | AI Product Builder, React Developer & Robotics Trainer" />
+    <meta property="og:description" content="Creative React portfolio showcasing AI dashboards, product UI/UX, Firebase reviews, SEO-ready interfaces, backend API integration, real IoT hardware projects, and programming/robotics training at Tekatech." />
     <meta property="og:image" content="https://amr-portfolio-theta-five.vercel.app/images/amr-profile-square.webp" />
     <meta property="og:image:secure_url" content="https://amr-portfolio-theta-five.vercel.app/images/amr-profile-square.webp" />
     <meta property="og:image:type" content="image/webp" />
     <meta property="og:image:width" content="720" />
     <meta property="og:image:height" content="720" />
-    <meta property="og:image:alt" content="Amr Khaled Abozeid - AI Engineer and Front-End Developer portfolio" />
+    <meta property="og:image:alt" content="Eng Amr Khaled - AI Engineer, Front-End Developer, and Robotics Trainer portfolio" />
     <meta property="og:site_name" content="Amr Khaled Portfolio" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="ar_EG" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Amr Khaled Abozeid | AI Engineer & Front-End Developer" />
-    <meta name="twitter:description" content="Portfolio showcasing AI, Front-End, Backend API integration, and real IoT hardware work." />
+    <meta name="twitter:title" content="Eng Amr Khaled | AI Product Builder, React Developer & Robotics Trainer" />
+    <meta name="twitter:description" content="Creative React portfolio for AI products, Firebase, SEO, backend API integration, real IoT hardware work, and Tekatech programming/robotics training." />
     <meta name="twitter:image" content="https://amr-portfolio-theta-five.vercel.app/images/amr-profile-square.webp" />
-    <meta name="twitter:image:alt" content="Amr Khaled Abozeid - AI Engineer and Front-End Developer portfolio" />
+    <meta name="twitter:image:alt" content="Eng Amr Khaled - AI Engineer, Front-End Developer, and Robotics Trainer portfolio" />
 
     <link rel="icon" type="image/webp" href="/images/amr-logo.webp" />
     <link rel="apple-touch-icon" href="/images/amr-logo.png" />
@@ -56,15 +64,15 @@
           {
             "@type": "Person",
             "@id": "https://amr-portfolio-theta-five.vercel.app/#person",
-            "name": "Amr Khaled Abozeid",
-            "alternateName": "عمرو خالد أبو زيد",
-            "jobTitle": "AI Engineer and Front-End Developer",
+            "name": "Eng Amr Khaled",
+            "alternateName": "Eng Amr Khaled",
+            "jobTitle": "AI Engineer, Front-End Developer, and Programming/Robotics Trainer",
             "email": "mailto:amrk78420@gmail.com",
             "telephone": "+201008454029",
             "image": "https://amr-portfolio-theta-five.vercel.app/images/amr-profile-square.webp",
             "address": { "@type": "PostalAddress", "addressLocality": "Mansoura", "addressCountry": "EG" },
             "alumniOf": { "@type": "CollegeOrUniversity", "name": "Sadat University - Faculty of Computers and Artificial Intelligence" },
-            "knowsAbout": ["React", "JavaScript", "Python", "Flask", "Artificial Intelligence", "IoT", "ESP32-CAM", "Frontend Development", "REST APIs", "SEO", "UI/UX"],
+            "knowsAbout": ["React", "JavaScript", "Python", "Flask", "Artificial Intelligence", "IoT", "ESP32-CAM", "Frontend Development", "REST APIs", "SEO", "UI/UX", "Programming Training", "Robotics Training", "Tekatech"],
             "sameAs": [
               "https://github.com/byAmrkhaled0",
               "https://www.linkedin.com/in/amr-khaled-0a58822a4",
@@ -76,8 +84,8 @@
             "@type": "ProfilePage",
             "@id": "https://amr-portfolio-theta-five.vercel.app/#profilepage",
             "url": "https://amr-portfolio-theta-five.vercel.app/",
-            "name": "Amr Khaled Abozeid Portfolio",
-            "description": "Premium portfolio for AI engineering, front-end development, React, Firebase, SEO, API integration, and IoT hardware projects.",
+            "name": "Eng Amr Khaled Portfolio",
+            "description": "Creative AI product-builder portfolio for front-end development, React, Firebase, SEO, API integration, IoT hardware projects, and Tekatech programming/robotics training.",
             "mainEntity": { "@id": "https://amr-portfolio-theta-five.vercel.app/#person" },
             "isPartOf": { "@id": "https://amr-portfolio-theta-five.vercel.app/#website" },
             "inLanguage": ["en", "ar"]
@@ -86,10 +94,10 @@
             "@type": "WebSite",
             "@id": "https://amr-portfolio-theta-five.vercel.app/#website",
             "url": "https://amr-portfolio-theta-five.vercel.app/",
-            "name": "Amr Khaled Portfolio",
-            "description": "Portfolio for AI, front-end, React, SEO, backend API integration, and real IoT hardware projects.",
+            "name": "Eng Amr Khaled Portfolio",
+            "description": "Portfolio for AI products, React front-end, SEO, backend API integration, UI/UX, real IoT hardware projects, and programming/robotics training.",
             "publisher": { "@id": "https://amr-portfolio-theta-five.vercel.app/#person" },
-            "inLanguage": ["en", "ar", "fr", "de", "es", "it", "tr"]
+            "inLanguage": ["en", "ar"]
           },
           {
             "@type": "ItemList",

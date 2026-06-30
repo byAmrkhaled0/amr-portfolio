@@ -5,7 +5,7 @@ import {
   Code2, Cpu, Send, Globe2, Trophy, BrainCircuit, Server, GraduationCap,
   ShieldCheck, Zap, Star, Quote, Target, Award, BadgeCheck, UserRound,
   MonitorSmartphone, Workflow, Gauge, Search, Download, Layers, Rocket,
-  CheckCircle2, MousePointerClick, Languages, Database, Camera, Wifi, ArrowUp
+  CheckCircle2, MousePointerClick, Languages, Database, Camera, Wifi, ArrowUp, Volume2, VolumeX, Bot, School
 } from "lucide-react";
 import "./styles.css";
 
@@ -44,9 +44,9 @@ function getFirebaseDb() {
 }
 
 const profile = {
-  name: "Amr Khaled Abozeid",
-  arabicName: "عمرو خالد أبو زيد",
-  role: "AI Engineer & Front-End Developer",
+  name: "Eng Amr Khaled",
+  arabicName: "Eng Amr Khaled",
+  role: "AI Engineer, Front-End Developer & Programming/Robotics Trainer",
   phone: "01008454029",
   email: "amrk78420@gmail.com",
   github: "https://github.com/byAmrkhaled0",
@@ -60,78 +60,41 @@ const profile = {
 };
 
 const languageNames = {
-  en: "English", ar: "العربية", fr: "Français", de: "Deutsch", es: "Español", it: "Italiano", tr: "Türkçe"
+  en: "English", ar: "العربية"
 };
 
 const translations = {
   en: {
-    dir: "ltr", chooseLang: "Choose language", nav: ["Home", "About", "Skills", "Services", "Projects", "Reviews", "Certificates", "Contact"],
-    badge: "AI Engineer • Front-End • Real IoT Hardware", title1: "AI-powered web products", title2: "built with clean execution",
-    subtitle: "I build modern React websites, AI-integrated dashboards, backend API experiences, and real IoT hardware projects that look professional and work in production.",
+    dir: "ltr", chooseLang: "Language", nav: ["Home", "About", "Skills", "Services", "Projects", "Reviews", "Certificates", "Contact"],
+    badge: "AI Engineer • Front-End • IoT • Programming & Robotics Trainer", title1: "AI-powered web products", title2: "built with clean execution",
+    subtitle: "I build modern React websites, AI-integrated dashboards, backend API experiences, and real IoT hardware projects. I also train students in programming and robotics at Tekatech.",
     ctaWork: "Explore Projects", ctaContact: "Start a Project", cv: "Download CV", codeRole: "AI Engineer + Front-End Developer",
-    highlights: ["Production websites", "AI + API integration", "Real IoT hardware", "7-language portfolio"],
-    stats: [{ n: "7+", label: "Live Projects" }, { n: "AI", label: "Graduation Product" }, { n: "IoT", label: "Real Hardware" }, { n: "7", label: "Languages" }],
+    highlights: ["Production websites", "AI + API integration", "Tekatech Trainer", "Real IoT hardware"],
+    stats: [{ n: "7+", label: "Live Projects" }, { n: "AI", label: "Graduation Product" }, { n: "IoT", label: "Real Hardware" }, { n: "AR/EN", label: "Bilingual" }],
     aboutTitle: "Professional Profile", aboutHeading: "I combine clean UI, backend integration, AI thinking, and real hardware experience.",
-    about: "I’m Amr Khaled Abozeid, an Egyptian Computer & AI graduate from Mansoura. I work across front-end development, AI engineering, backend API integration, and IoT sensor workflows.",
+    about: "I’m Amr Khaled Abozeid, an Egyptian Computer & AI graduate from Mansoura. I work across front-end development, AI engineering, backend API integration, IoT sensor workflows, and I train students in programming and robotics at Tekatech.",
     about2: "My strongest project is Ecosense AI: a smart plant-health platform that connects React frontend screens, Flask AI backend APIs, image-based diagnosis, ESP32-CAM workflow, and real sensor readings.",
-    bioTitle: "Short Professional Bio", bio: "Front-End Developer and AI Engineer skilled in React, JavaScript, Python, Flask, REST APIs, Vercel, GitHub, ESP32-CAM, DHT sensors, soil-moisture sensors, LDR/light sensors, and real hardware wiring.",
+    bioTitle: "Short Professional Bio", bio: "Front-End Developer, AI Engineer, and Programming/Robotics Trainer at Tekatech, skilled in React, JavaScript, Python, Flask, REST APIs, Vercel, GitHub, ESP32-CAM, DHT sensors, soil-moisture sensors, LDR/light sensors, and real hardware wiring.",
     skillsTitle: "Technical Stack", servicesTitle: "Services", chooseTitle: "Why Work With Me", projectsTitle: "Case Studies", reviewsTitle: "Client Reviews", certTitle: "Education & Certifications", hardwareTitle: "Real Hardware & IoT", aiTitle: "AI Experience",
     caseLabels: ["Problem", "Solution", "Result"], visit: "View Project", contactTitle: "Have an idea? Let’s build it properly.", contactSubtitle: "Send me a message and I’ll help you turn it into a fast, elegant, production-ready website or AI-powered product.",
     ai: "Ecosense AI combines plant image analysis, real sensor readings, ESP32-CAM, hardware wiring, React frontend dashboards, and Flask backend integration.",
     finalTitle: "Need a premium website or AI product?", finalText: "Let’s build a digital experience that fits your brand and delivers results.", startNow: "Start Now"
   },
   ar: {
-    dir: "rtl", chooseLang: "اختار اللغة", nav: ["الرئيسية", "عني", "المهارات", "الخدمات", "الأعمال", "الآراء", "الشهادات", "تواصل"],
-    badge: "مهندس AI • Front-End • هاردوير IoT حقيقي", title1: "مواقع ومنتجات ذكية", title2: "بتنفيذ نظيف واحترافي",
-    subtitle: "أبني مواقع React حديثة، داشبوردات متصلة بالذكاء الاصطناعي، تجارب APIs، ومشاريع IoT بهاردوير حقيقي بشكل احترافي وجاهز للاستخدام.",
+    dir: "rtl", chooseLang: "اللغة", nav: ["الرئيسية", "عني", "المهارات", "الخدمات", "الأعمال", "الآراء", "الشهادات", "تواصل"],
+    badge: "مهندس AI • Front-End • IoT • مدرب برمجة وروبوتيكس", title1: "مواقع ومنتجات ذكية", title2: "بتنفيذ نظيف واحترافي",
+    subtitle: "أبني مواقع React حديثة، داشبوردات متصلة بالذكاء الاصطناعي، تجارب APIs، ومشاريع IoT بهاردوير حقيقي، وبشتغل كمدرب برمجة وروبوتيكس في شركة Tekatech.",
     ctaWork: "شاهد المشاريع", ctaContact: "ابدأ مشروع", cv: "تحميل CV", codeRole: "AI Engineer + Front-End Developer",
-    highlights: ["مواقع Production", "دمج AI + APIs", "هاردوير IoT حقيقي", "بورتفوليو 7 لغات"],
-    stats: [{ n: "7+", label: "مشاريع Live" }, { n: "AI", label: "مشروع تخرج" }, { n: "IoT", label: "هاردوير حقيقي" }, { n: "7", label: "لغات" }],
+    highlights: ["مواقع Production", "دمج AI + APIs", "مدرب Tekatech", "هاردوير IoT حقيقي"],
+    stats: [{ n: "7+", label: "مشاريع Live" }, { n: "AI", label: "مشروع تخرج" }, { n: "IoT", label: "هاردوير حقيقي" }, { n: "AR/EN", label: "عربي / إنجليزي" }],
     aboutTitle: "نبذة احترافية", aboutHeading: "بجمع بين واجهة نظيفة، ربط باك إند، تفكير AI، وخبرة هاردوير حقيقي.",
-    about: "أنا عمرو خالد أبو زيد، خريج حاسبات وذكاء اصطناعي مصري من المنصورة. شغلي بين Front-End، هندسة AI، ربط APIs، ومسارات IoT والسينسورات.",
+    about: "أنا عمرو خالد أبو زيد، خريج حاسبات وذكاء اصطناعي مصري من المنصورة. شغلي بين Front-End، هندسة AI، ربط APIs، ومسارات IoT والسينسورات، وبشتغل كمدرب برمجة وروبوتيكس في شركة Tekatech.",
     about2: "أقوى مشروع عندي هو Ecosense AI: منصة ذكية لصحة النبات بتربط واجهات React وFlask AI APIs وتشخيص بالصور وESP32-CAM وقراءات سينسورات حقيقية.",
-    bioTitle: "سيرة مختصرة", bio: "Front-End Developer وAI Engineer متمكن من React وJavaScript وPython وFlask وREST APIs وVercel وGitHub وESP32-CAM وDHT وSoil Moisture وLDR وتوصيلات الهاردوير الحقيقي.",
+    bioTitle: "سيرة مختصرة", bio: "Front-End Developer وAI Engineer ومدرب برمجة وروبوتيكس في Tekatech، متمكن من React وJavaScript وPython وFlask وREST APIs وVercel وGitHub وESP32-CAM وDHT وSoil Moisture وLDR وتوصيلات الهاردوير الحقيقي.",
     skillsTitle: "المهارات التقنية", servicesTitle: "الخدمات", chooseTitle: "نقاط القوة", projectsTitle: "دراسات حالة", reviewsTitle: "آراء العملاء", certTitle: "التعليم والشهادات", hardwareTitle: "Real Hardware & IoT", aiTitle: "خبرة الذكاء الاصطناعي",
     caseLabels: ["المشكلة", "الحل", "النتيجة"], visit: "مشاهدة المشروع", contactTitle: "عندك فكرة؟ خلينا نبنيها صح.", contactSubtitle: "ابعتلي رسالة وأنا أساعدك تحولها لموقع سريع واحترافي أو منتج مدعوم بالذكاء الاصطناعي.",
     ai: "Ecosense AI يجمع تحليل صور النبات وقراءات سينسورات حقيقية وESP32-CAM وتوصيلات هاردوير وReact Dashboard وFlask Backend.",
     finalTitle: "محتاج موقع Premium أو منتج AI؟", finalText: "خلينا نبني تجربة رقمية تليق بالبراند وتجيب نتيجة.", startNow: "ابدأ الآن"
-  },
-  fr: {
-    dir: "ltr", chooseLang: "Choisir la langue", nav: ["Accueil", "À propos", "Compétences", "Services", "Projets", "Avis", "Certificats", "Contact"],
-    badge: "Ingénieur IA • Front-End • IoT réel", title1: "Produits web avec IA", title2: "exécutés proprement",
-    subtitle: "Je crée des sites React modernes, des tableaux de bord connectés à l’IA, des intégrations API backend et des projets IoT avec matériel réel.",
-    ctaWork: "Voir les projets", ctaContact: "Démarrer un projet", cv: "Télécharger le CV", codeRole: "Ingénieur IA + Développeur Front-End",
-    highlights: ["Sites en production", "IA + APIs", "Matériel IoT réel", "Portfolio 7 langues"], stats: [{ n: "7+", label: "Projets en ligne" }, { n: "AI", label: "Projet de fin d’études" }, { n: "IoT", label: "Matériel réel" }, { n: "7", label: "Langues" }],
-    aboutTitle: "Profil professionnel", aboutHeading: "J’associe UI propre, intégration backend, logique IA et expérience matérielle réelle.", about: "Je suis Amr Khaled Abozeid, diplômé en informatique et IA, originaire de Mansoura, Égypte.", about2: "Mon projet phare est Ecosense AI: une plateforme de santé des plantes avec React, Flask, diagnostic par image, ESP32-CAM et capteurs réels.", bioTitle: "Bio courte", bio: "Développeur Front-End et ingénieur IA maîtrisant React, JavaScript, Python, Flask, REST APIs, Vercel, GitHub, ESP32-CAM et capteurs IoT.",
-    skillsTitle: "Stack technique", servicesTitle: "Services", chooseTitle: "Pourquoi travailler avec moi", projectsTitle: "Études de cas", reviewsTitle: "Avis", certTitle: "Formation & Certificats", hardwareTitle: "Matériel réel & IoT", aiTitle: "Expérience IA", caseLabels: ["Problème", "Solution", "Résultat"], visit: "Voir le projet", contactTitle: "Une idée ? Construisons-la correctement.", contactSubtitle: "Envoyez-moi un message pour créer un site rapide, élégant ou un produit IA.", ai: "Ecosense AI combine images, capteurs réels, ESP32-CAM, câblage, React et Flask.", finalTitle: "Besoin d’un site premium ou d’un produit IA ?", finalText: "Construisons une expérience efficace pour votre marque.", startNow: "Commencer"
-  },
-  de: {
-    dir: "ltr", chooseLang: "Sprache wählen", nav: ["Start", "Über mich", "Skills", "Services", "Projekte", "Bewertungen", "Zertifikate", "Kontakt"],
-    badge: "AI Engineer • Front-End • echte IoT-Hardware", title1: "KI-gestützte Webprodukte", title2: "sauber umgesetzt", subtitle: "Ich entwickle moderne React-Websites, KI-Dashboards, API-Integrationen und IoT-Projekte mit echter Hardware.", ctaWork: "Projekte ansehen", ctaContact: "Projekt starten", cv: "CV herunterladen", codeRole: "AI Engineer + Front-End Developer",
-    highlights: ["Production Websites", "AI + APIs", "Echte IoT-Hardware", "7 Sprachen"], stats: [{ n: "7+", label: "Live-Projekte" }, { n: "AI", label: "Abschlussprojekt" }, { n: "IoT", label: "Echte Hardware" }, { n: "7", label: "Sprachen" }],
-    aboutTitle: "Professionelles Profil", aboutHeading: "Ich verbinde saubere UI, Backend-Integration, KI-Denken und reale Hardware-Erfahrung.", about: "Ich bin Amr Khaled Abozeid, Computer- und AI-Absolvent aus Mansoura, Ägypten.", about2: "Mein stärkstes Projekt ist Ecosense AI: React Frontend, Flask AI Backend, Bilddiagnose, ESP32-CAM und echte Sensorwerte.", bioTitle: "Kurzprofil", bio: "Front-End Developer und AI Engineer mit React, JavaScript, Python, Flask, REST APIs, Vercel, GitHub, ESP32-CAM und IoT-Sensoren.",
-    skillsTitle: "Technischer Stack", servicesTitle: "Services", chooseTitle: "Warum mit mir arbeiten", projectsTitle: "Case Studies", reviewsTitle: "Bewertungen", certTitle: "Bildung & Zertifikate", hardwareTitle: "Echte Hardware & IoT", aiTitle: "AI Erfahrung", caseLabels: ["Problem", "Lösung", "Ergebnis"], visit: "Projekt ansehen", contactTitle: "Eine Idee? Lass sie uns richtig bauen.", contactSubtitle: "Schreib mir für eine schnelle, elegante Website oder ein KI-Produkt.", ai: "Ecosense AI kombiniert Pflanzenbilder, reale Sensoren, ESP32-CAM, Hardware-Verkabelung, React und Flask.", finalTitle: "Premium Website oder AI-Produkt?", finalText: "Lass uns eine digitale Erfahrung bauen, die Ergebnisse liefert.", startNow: "Starten"
-  },
-  es: {
-    dir: "ltr", chooseLang: "Elegir idioma", nav: ["Inicio", "Sobre mí", "Habilidades", "Servicios", "Proyectos", "Reseñas", "Certificados", "Contacto"],
-    badge: "Ingeniero IA • Front-End • Hardware IoT real", title1: "Productos web con IA", title2: "con ejecución limpia", subtitle: "Construyo sitios React modernos, paneles con IA, integraciones API y proyectos IoT con hardware real.", ctaWork: "Ver proyectos", ctaContact: "Iniciar proyecto", cv: "Descargar CV", codeRole: "Ingeniero IA + Front-End Developer",
-    highlights: ["Webs en producción", "IA + APIs", "Hardware IoT real", "Portfolio 7 idiomas"], stats: [{ n: "7+", label: "Proyectos live" }, { n: "AI", label: "Proyecto final" }, { n: "IoT", label: "Hardware real" }, { n: "7", label: "Idiomas" }],
-    aboutTitle: "Perfil profesional", aboutHeading: "Combino UI limpia, integración backend, pensamiento IA y experiencia con hardware real.", about: "Soy Amr Khaled Abozeid, graduado en Computación e IA de Mansoura, Egipto.", about2: "Mi proyecto principal es Ecosense AI: React, Flask AI APIs, diagnóstico por imagen, ESP32-CAM y sensores reales.", bioTitle: "Bio breve", bio: "Front-End Developer e Ingeniero IA con React, JavaScript, Python, Flask, REST APIs, Vercel, GitHub, ESP32-CAM y sensores IoT.",
-    skillsTitle: "Stack técnico", servicesTitle: "Servicios", chooseTitle: "Por qué trabajar conmigo", projectsTitle: "Casos de estudio", reviewsTitle: "Reseñas", certTitle: "Educación y Certificados", hardwareTitle: "Hardware real & IoT", aiTitle: "Experiencia IA", caseLabels: ["Problema", "Solución", "Resultado"], visit: "Ver proyecto", contactTitle: "¿Tienes una idea? Construyámosla bien.", contactSubtitle: "Envíame un mensaje y creemos un sitio rápido o producto con IA.", ai: "Ecosense AI combina imágenes, sensores reales, ESP32-CAM, cableado, React y Flask.", finalTitle: "¿Necesitas web premium o producto IA?", finalText: "Construyamos una experiencia digital que entregue resultados.", startNow: "Empezar"
-  },
-  it: {
-    dir: "ltr", chooseLang: "Scegli lingua", nav: ["Home", "Chi sono", "Skill", "Servizi", "Progetti", "Recensioni", "Certificati", "Contatti"],
-    badge: "AI Engineer • Front-End • Hardware IoT reale", title1: "Prodotti web con IA", title2: "realizzati con cura", subtitle: "Creo siti React moderni, dashboard con IA, integrazioni API e progetti IoT con hardware reale.", ctaWork: "Vedi progetti", ctaContact: "Avvia progetto", cv: "Scarica CV", codeRole: "AI Engineer + Front-End Developer",
-    highlights: ["Siti in produzione", "IA + APIs", "Hardware IoT reale", "Portfolio 7 lingue"], stats: [{ n: "7+", label: "Progetti live" }, { n: "AI", label: "Progetto finale" }, { n: "IoT", label: "Hardware reale" }, { n: "7", label: "Lingue" }],
-    aboutTitle: "Profilo professionale", aboutHeading: "Unisco UI pulita, integrazione backend, logica IA ed esperienza hardware reale.", about: "Sono Amr Khaled Abozeid, laureato in Computer & AI da Mansoura, Egitto.", about2: "Il mio progetto principale è Ecosense AI: React, Flask AI APIs, diagnosi da immagine, ESP32-CAM e sensori reali.", bioTitle: "Bio breve", bio: "Front-End Developer e AI Engineer con React, JavaScript, Python, Flask, REST APIs, Vercel, GitHub, ESP32-CAM e sensori IoT.",
-    skillsTitle: "Stack tecnico", servicesTitle: "Servizi", chooseTitle: "Perché lavorare con me", projectsTitle: "Case Study", reviewsTitle: "Recensioni", certTitle: "Formazione & Certificati", hardwareTitle: "Hardware reale & IoT", aiTitle: "Esperienza IA", caseLabels: ["Problema", "Soluzione", "Risultato"], visit: "Vedi progetto", contactTitle: "Hai un’idea? Costruiamola bene.", contactSubtitle: "Mandami un messaggio per creare un sito veloce o un prodotto IA.", ai: "Ecosense AI combina immagini, sensori reali, ESP32-CAM, cablaggio, React e Flask.", finalTitle: "Serve un sito premium o prodotto IA?", finalText: "Costruiamo un’esperienza digitale efficace.", startNow: "Inizia"
-  },
-  tr: {
-    dir: "ltr", chooseLang: "Dil seç", nav: ["Ana sayfa", "Hakkımda", "Yetenekler", "Hizmetler", "Projeler", "Yorumlar", "Sertifikalar", "İletişim"],
-    badge: "AI Engineer • Front-End • gerçek IoT donanımı", title1: "AI destekli web ürünleri", title2: "temiz uygulama ile", subtitle: "Modern React siteleri, AI panelleri, backend API entegrasyonları ve gerçek donanımlı IoT projeleri geliştiriyorum.", ctaWork: "Projeleri gör", ctaContact: "Proje başlat", cv: "CV indir", codeRole: "AI Engineer + Front-End Developer",
-    highlights: ["Canlı siteler", "AI + API", "Gerçek IoT donanımı", "7 dil"], stats: [{ n: "7+", label: "Canlı proje" }, { n: "AI", label: "Mezuniyet projesi" }, { n: "IoT", label: "Gerçek donanım" }, { n: "7", label: "Dil" }],
-    aboutTitle: "Profesyonel profil", aboutHeading: "Temiz UI, backend entegrasyonu, AI yaklaşımı ve gerçek donanım deneyimini birleştiriyorum.", about: "Ben Amr Khaled Abozeid, Mansoura, Mısır’dan Bilgisayar ve AI mezunuyum.", about2: "En güçlü projem Ecosense AI: React frontend, Flask AI backend, görüntü tanıma, ESP32-CAM ve gerçek sensör verileri.", bioTitle: "Kısa bio", bio: "React, JavaScript, Python, Flask, REST APIs, Vercel, GitHub, ESP32-CAM ve IoT sensörlerinde deneyimli Front-End Developer ve AI Engineer.",
-    skillsTitle: "Teknik stack", servicesTitle: "Hizmetler", chooseTitle: "Neden benimle çalışmalısınız", projectsTitle: "Case Studies", reviewsTitle: "Yorumlar", certTitle: "Eğitim & Sertifikalar", hardwareTitle: "Gerçek Donanım & IoT", aiTitle: "AI Deneyimi", caseLabels: ["Problem", "Çözüm", "Sonuç"], visit: "Projeyi gör", contactTitle: "Bir fikrin var mı? Doğru şekilde oluşturalım.", contactSubtitle: "Hızlı, şık bir site veya AI ürünü için bana mesaj gönder.", ai: "Ecosense AI bitki görüntüleri, gerçek sensörler, ESP32-CAM, kablolama, React ve Flask’ı birleştirir.", finalTitle: "Premium site veya AI ürünü mü lazım?", finalText: "Markana uygun sonuç odaklı bir deneyim oluşturalım.", startNow: "Başla"
   }
 };
 
@@ -146,6 +109,7 @@ const skills = [
   { en: "Frontend Engineering", ar: "تطوير الواجهات", icon: Code2, items: ["React", "JavaScript", "Responsive UI", "RTL/LTR"] },
   { en: "AI & Backend APIs", ar: "الذكاء الاصطناعي والباك إند", icon: BrainCircuit, items: ["Python", "Flask", "REST APIs", "AI Logic"] },
   { en: "Real Hardware & IoT", ar: "هاردوير وIoT حقيقي", icon: Cpu, items: ["ESP32-CAM", "DHT11", "Soil Sensor", "LDR"] },
+  { en: "Programming & Robotics Training", ar: "تدريب برمجة وروبوتيكس", icon: Bot, items: ["Tekatech", "Kids Coding", "Robotics", "Scratch/Python"] },
   { en: "Deployment & SEO", ar: "النشر و SEO", icon: Rocket, items: ["Vercel", "GitHub", "Performance", "Schema"] }
 ];
 
@@ -153,14 +117,16 @@ const services = [
   { en: "Portfolio & Business Websites", ar: "مواقع شخصية وبيزنس", icon: MonitorSmartphone, text: "Clean, responsive, conversion-focused websites.", arText: "مواقع نظيفة ومتجاوبة ومركزة على التحويل." },
   { en: "AI Dashboard Frontends", ar: "واجهات داشبورد AI", icon: Gauge, text: "Frontend screens connected to AI backend APIs.", arText: "واجهات متصلة بباك إند وAPIs للذكاء الاصطناعي." },
   { en: "API Integration", ar: "ربط APIs", icon: Workflow, text: "Structured React experiences for real backend systems.", arText: "تجارب React منظمة لأنظمة باك إند حقيقية." },
-  { en: "SEO & Performance", ar: "SEO وسرعة", icon: Search, text: "Semantic pages, optimized assets, and clear metadata.", arText: "صفحات منظمة، صور مضغوطة، وميتا داتا قوية." }
+  { en: "SEO & Performance", ar: "SEO وسرعة", icon: Search, text: "Semantic pages, optimized assets, and clear metadata.", arText: "صفحات منظمة، صور مضغوطة، وميتا داتا قوية." },
+  { en: "Programming & Robotics Training", ar: "تدريب برمجة وروبوتيكس", icon: School, text: "Student-friendly sessions for coding logic, robotics basics, and practical projects at Tekatech.", arText: "سيشنات عملية للطلاب في البرمجة والروبوتيكس وتبسيط المنطق داخل Tekatech." }
 ];
 
 const whyChoose = [
   { en: "Real product mindset", ar: "تفكير منتج حقيقي", icon: Target },
   { en: "Clean responsive UI", ar: "واجهة نظيفة ومتجاوبة", icon: ShieldCheck },
   { en: "AI + Web + IoT", ar: "AI + Web + IoT", icon: Layers },
-  { en: "Fast delivery and clear communication", ar: "تسليم سريع وتواصل واضح", icon: Zap }
+  { en: "Fast delivery and clear communication", ar: "تسليم سريع وتواصل واضح", icon: Zap },
+  { en: "Programming & Robotics Trainer at Tekatech", ar: "مدرب برمجة وروبوتيكس في Tekatech", icon: School }
 ];
 
 const hardwareExperience = [
@@ -180,7 +146,11 @@ const projects = [
   { title:"El Sobky Charity", category:"Charity / Community Website", image:"/images/els.webp", url:"https://alsobky-charity-website.vercel.app/", stack:["RTL","Responsive","Community UX"], description:"A polished charity website for activities, registration flows, and community trust.", arDescription:"موقع خيري احترافي للأنشطة ومسارات التسجيل وبناء الثقة.", problem:"The foundation needed a trustworthy website that organizes its activities.", arProblem:"المؤسسة كانت محتاجة موقع موثوق ينظم أنشطتها.", solution:"Built a refined RTL website with official actions and strong readability.", arSolution:"بنيت موقع RTL منظم بأزرار رسمية وقابلية قراءة قوية.", result:"A credible digital platform for easier access to foundation activities.", arResult:"منصة رقمية موثوقة تسهل الوصول لأنشطة المؤسسة." }
 ];
 
+const featuredProject = projects.find(project => project.title === "Ecosense AI") || projects[0];
+const portfolioProjects = projects.filter(project => project.title !== "Ecosense AI");
+
 const certificates = [
+  { title:"Tekatech Programming & Robotics Trainer", issuer:"Professional Experience", meta:"Teaching programming logic, robotics concepts, and practical tech sessions", icon:School },
   { title:"Sadat University - Faculty of Computers and Artificial Intelligence", issuer:"Education", meta:"Computer & Artificial Intelligence Graduate", icon:GraduationCap },
   { title:"AWS Academy Graduate - Cloud Foundations", issuer:"Amazon Web Services Training and Certification", meta:"AWS badge - Cloud Computing foundations and AWS core services", icon:Server },
   { title:"AWS Academy Graduate - Machine Learning for Natural Language Processing", issuer:"Amazon Web Services Training and Certification", meta:"AWS badge - NLP and machine learning workflows", icon:BrainCircuit },
@@ -217,7 +187,10 @@ function BrowserFrame({ image, title, className="", priority=false }){
 }
 
 function App(){
-  const [lang,setLang] = useState(()=> localStorage.getItem("portfolio-lang") || "en");
+  const [lang,setLang] = useState(()=> {
+    const savedLang = localStorage.getItem("portfolio-lang");
+    return ["en", "ar"].includes(savedLang) ? savedLang : "en";
+  });
   const [theme,setTheme] = useState(()=> localStorage.getItem("portfolio-theme") || "dark");
   const [menuOpen,setMenuOpen] = useState(false);
   const [reviews,setReviews] = useState(fallbackReviews);
@@ -227,11 +200,85 @@ function App(){
   const [activeFilter,setActiveFilter] = useState("all");
   const [activeProject,setActiveProject] = useState(null);
   const [scrollUi,setScrollUi] = useState({ visible:false, progress:0 });
+  const [soundOn,setSoundOn] = useState(()=> localStorage.getItem("portfolio-sound") === "on");
+  const audioRef = React.useRef(null);
 
   const t = translations[lang] || translations.en;
   const isAr = lang === "ar";
   const whatsappUrl = useMemo(()=>`https://wa.me/20${profile.phone.slice(1)}?text=${encodeURIComponent(profile.whatsappMessage)}` ,[]);
   const navIds=["home","about","skills","services","projects","reviews","certificates","contact"];
+
+  const playUiSound = (type = "tap", force = false) => {
+    if((!soundOn && !force) || typeof window === "undefined") return;
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if(!AudioContext) return;
+    const ctx = audioRef.current || new AudioContext();
+    audioRef.current = ctx;
+    if(ctx.state === "suspended") ctx.resume?.();
+
+    const now = ctx.currentTime;
+    const master = ctx.createGain();
+    const filter = ctx.createBiquadFilter();
+    const compressor = ctx.createDynamicsCompressor();
+
+    filter.type = "lowpass";
+    filter.frequency.setValueAtTime(5400, now);
+    filter.Q.setValueAtTime(0.65, now);
+    compressor.threshold.setValueAtTime(-22, now);
+    compressor.knee.setValueAtTime(24, now);
+    compressor.ratio.setValueAtTime(5, now);
+    compressor.attack.setValueAtTime(0.004, now);
+    compressor.release.setValueAtTime(0.13, now);
+
+    master.gain.setValueAtTime(0.0001, now);
+    master.gain.exponentialRampToValueAtTime(type === "tap" ? 0.028 : 0.042, now + 0.014);
+    master.gain.exponentialRampToValueAtTime(0.0001, now + (type === "tap" ? 0.16 : 0.34));
+    master.connect(filter);
+    filter.connect(compressor);
+    compressor.connect(ctx.destination);
+
+    const presets = {
+      tap: [{ f: 620, d: 0.09, delay: 0 }, { f: 930, d: 0.11, delay: 0.035, v: 0.55 }],
+      open: [{ f: 392, d: 0.14, delay: 0 }, { f: 587, d: 0.16, delay: 0.055, v: 0.72 }, { f: 784, d: 0.18, delay: 0.105, v: 0.54 }],
+      success: [{ f: 523.25, d: 0.15, delay: 0 }, { f: 659.25, d: 0.16, delay: 0.06, v: 0.68 }, { f: 880, d: 0.20, delay: 0.12, v: 0.48 }]
+    };
+
+    const notes = presets[type] || presets.tap;
+    notes.forEach((note) => {
+      const t0 = now + (note.delay || 0);
+      const gain = ctx.createGain();
+      const osc = ctx.createOscillator();
+      const overtone = ctx.createOscillator();
+      const volume = note.v ?? 1;
+
+      osc.type = "sine";
+      overtone.type = "triangle";
+      osc.frequency.setValueAtTime(note.f, t0);
+      osc.frequency.exponentialRampToValueAtTime(note.f * 1.012, t0 + note.d);
+      overtone.frequency.setValueAtTime(note.f * 2, t0);
+
+      gain.gain.setValueAtTime(0.0001, t0);
+      gain.gain.exponentialRampToValueAtTime(0.18 * volume, t0 + 0.012);
+      gain.gain.exponentialRampToValueAtTime(0.0001, t0 + note.d);
+
+      osc.connect(gain);
+      overtone.connect(gain);
+      gain.connect(master);
+      osc.start(t0);
+      overtone.start(t0);
+      osc.stop(t0 + note.d + 0.025);
+      overtone.stop(t0 + note.d + 0.025);
+    });
+  };
+
+  const toggleSound = () => {
+    setSoundOn((value)=>{
+      const next = !value;
+      localStorage.setItem("portfolio-sound", next ? "on" : "off");
+      if(next) window.setTimeout(()=>playUiSound("success", true), 0);
+      return next;
+    });
+  };
 
   const projectFilters = [
     { key:"all", en:"All Work", ar:"كل الأعمال" },
@@ -263,10 +310,10 @@ function App(){
     { icon:MonitorSmartphone, label:isAr?"Dashboard":"Dashboard", title:isAr?"واجهة استخدام كاملة":"Complete UI Experience", text:isAr?"داشبورد ويب وموبايل يعرض التشخيص والتاريخ والمهام.":"Web and mobile-friendly dashboard for diagnosis, history, and actions." }
   ];
 
-  const filteredProjects = useMemo(()=>projects.filter(project=>{
+  const filteredProjects = useMemo(()=>portfolioProjects.filter(project=>{
     if(activeFilter === "all") return true;
-    const text = `${project.title} ${project.category}`.toLowerCase();
-    if(activeFilter === "ai") return text.includes("ecosense") || text.includes("ai") || text.includes("iot");
+    const text = `${project.title} ${project.category} ${project.stack?.join(" ") || ""}`.toLowerCase();
+    if(activeFilter === "ai") return text.includes("ai") || text.includes("iot") || text.includes("programming");
     if(activeFilter === "education") return text.includes("education") || text.includes("academy") || text.includes("programming") || text.includes("student");
     if(activeFilter === "business") return text.includes("business") || text.includes("charity") || text.includes("community") || text.includes("pest");
     if(activeFilter === "fitness") return text.includes("fitness") || text.includes("gym") || text.includes("coaching");
@@ -274,12 +321,27 @@ function App(){
   }),[activeFilter]);
 
   useEffect(()=>{
-    document.documentElement.dataset.theme = theme;
-    document.documentElement.lang = lang;
-    document.documentElement.dir = t.dir;
+    const root = document.documentElement;
+    root.dataset.theme = theme;
+    document.body.dataset.theme = theme;
+    root.lang = lang;
+    root.dir = t.dir;
+    document.body.dir = t.dir;
     localStorage.setItem("portfolio-theme", theme);
     localStorage.setItem("portfolio-lang", lang);
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    if(metaTheme) metaTheme.setAttribute("content", theme === "dark" ? "#020712" : "#ffffff");
   },[theme,lang,t.dir]);
+  useEffect(()=>{
+    if(!soundOn) return;
+    const onClick = (event) => {
+      const target = event.target;
+      if(target?.closest?.("button, a, .filter-pills button, .lang-toggle")) playUiSound("tap");
+    };
+    document.addEventListener("click", onClick, true);
+    return () => document.removeEventListener("click", onClick, true);
+  },[soundOn]);
+
 
   useEffect(()=>{
     let unsubscribe = null;
@@ -355,6 +417,7 @@ function App(){
   },[]);
 
   const scrollToTop = () => {
+    playUiSound("tap");
     const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
     window.scrollTo({ top:0, behavior: reduceMotion ? "auto" : "smooth" });
   };
@@ -376,6 +439,10 @@ function App(){
       ".metrics",
       ".socials",
       ".profile-card",
+      ".featured-showcase",
+      ".featured-visual",
+      ".feature-pillars",
+      ".signature-strip",
       ".reveal-card",
       ".project-card",
       ".system-layer",
@@ -478,8 +545,9 @@ function App(){
       </a>
       <nav className={menuOpen ? "open" : ""}>{t.nav.map((item,index)=><button key={item} onClick={()=>goTo(navIds[index])}>{item}</button>)}</nav>
       <div className="nav-actions">
-        <label className="lang-picker" aria-label={t.chooseLang}><Languages size={16}/><span>{t.chooseLang}</span><select value={lang} onChange={e=>setLang(e.target.value)}>{Object.entries(languageNames).map(([code,name])=><option value={code} key={code}>{name}</option>)}</select></label>
+        <button type="button" className="icon-btn lang-toggle" onClick={()=>setLang(lang === "ar" ? "en" : "ar")} aria-label={isAr ? "Switch to English" : "تغيير اللغة للعربية"} title={isAr ? "English" : "العربية"}><Languages size={18}/></button>
         <button className="icon-btn" onClick={()=>setTheme(theme==="dark"?"light":"dark")} aria-label="Toggle theme">{theme==="dark"?<Sun/>:<Moon/>}</button>
+        <button className={`icon-btn sound-toggle ${soundOn ? "active" : ""}`} onClick={toggleSound} aria-label={isAr ? "تشغيل أو إيقاف صوت الواجهة" : "Toggle interface sound"} title={isAr ? "صوت الواجهة" : "Interface sound"}>{soundOn?<Volume2/>:<VolumeX/>}</button>
         <button className="menu-btn icon-btn" onClick={()=>setMenuOpen(v=>!v)} aria-label="Menu">{menuOpen?<X/>:<Menu/>}</button>
       </div>
     </header>
@@ -491,12 +559,26 @@ function App(){
         <h1 className="hero-title">{t.title1}<span>{t.title2}</span></h1>
         <p>{t.subtitle}</p>
         <div className="hero-actions">
-          <button className="primary magnetic" onClick={()=>goTo("projects")}>{t.ctaWork}<ArrowRight size={18}/></button>
+          <button className="primary magnetic" onClick={()=>goTo("featured")}>{isAr?"شوف أقوى مشروع":"See Flagship Project"}<ArrowRight size={18}/></button>
           <a className="secondary magnetic" href={whatsappUrl} target="_blank" rel="noreferrer">{t.ctaContact}<Phone size={18}/></a>
           <a className="secondary magnetic" href="/Amr-Khaled-CV.pdf" download>{t.cv}<Download size={18}/></a>
         </div>
         <div className="trust-row">{t.highlights.map(item=><span key={item}><BadgeCheck size={16}/>{item}</span>)}</div>
         <div className="metrics">{t.stats.map(stat=><div key={stat.label}><b>{stat.n}</b><span>{stat.label}</span></div>)}</div>
+        <div className="signature-strip" aria-label="Execution strengths">
+          <span><Gauge size={15}/>{isAr?"60fps Motion":"60fps Motion"}</span>
+          <span><Search size={15}/>{isAr?"SEO قوي":"SEO Built-in"}</span>
+          <span><Database size={15}/>{isAr?"Firebase Ready":"Firebase Ready"}</span>
+          <span><School size={15}/>{isAr?"مدرب Tekatech":"Tekatech Trainer"}</span>
+        </div>
+        <div className="command-deck premium-3d" aria-label="Developer execution console">
+          <div className="command-top"><span/><span/><span/><b>{isAr?"AMR PRODUCT OS":"AMR PRODUCT OS"}</b></div>
+          <div className="command-lines">
+            <code><em>01</em> designSystem.create(<b>"premium-ui"</b>)</code>
+            <code><em>02</em> aiApi.connect(<b>"real-product-flow"</b>)</code>
+            <code><em>03</em> performance.lock(<b>"fast-mobile"</b>)</code>
+          </div>
+        </div>
         <div className="socials"><a href={profile.github} target="_blank" rel="noreferrer"><GitHubIcon/>GitHub</a><a href={profile.linkedin} target="_blank" rel="noreferrer"><LinkedInIcon/>LinkedIn</a><a href={profile.facebook} target="_blank" rel="noreferrer"><FacebookIcon/>Facebook</a><a href={profile.instagram} target="_blank" rel="noreferrer"><InstagramIcon/>Instagram</a><a href={profile.tiktok} target="_blank" rel="noreferrer"><TikTokIcon/>TikTok</a></div>
       </div>
       <aside className="profile-card premium-3d hero-cinematic hero-3d-stage" aria-label="Developer profile">
@@ -507,6 +589,8 @@ function App(){
         <div className="hero-mini-panel">
           <div><span>{isAr?"واجهة":"Interface"}</span><b>Premium React</b></div>
           <div><span>{isAr?"مشروع قوي":"Top case"}</span><b>Ecosense AI</b></div>
+          <div><span>{isAr?"تدريب":"Training"}</span><b>Tekatech Robotics</b></div>
+          <div><span>{isAr?"أداء":"Performance"}</span><b>Fast UX</b></div>
         </div>
       </aside>
     </section>
@@ -517,6 +601,61 @@ function App(){
           {['React','AI Dashboards','Fast UI','API Integration','IoT Hardware','Premium UI/UX','SEO Ready','Case Studies'].map(item=><span key={`${loop}-${item}`}><Sparkles size={14}/>{item}</span>)}
         </div>)}
       </div>
+    </section>
+
+    <section className="section inspiration-lab" aria-label="Creative engineering direction">
+      <div className="lab-head">
+        <SectionLabel>{isAr?"مش بورتفوليو تقليدي":"Not a template portfolio"}</SectionLabel>
+        <h2 className="section-title">{isAr?"تجربة بتعرض طريقة التفكير قبل صور المشاريع.":"A portfolio experience that shows the thinking before the screenshots."}</h2>
+        <p>{isAr?"تجربة بورتفوليو مبنية على Product Thinking، جودة تنفيذ هندسية، ومشاريع حقيقية جاهزة للعرض والعمل.":"A portfolio experience built around product thinking, engineering quality, and real shipped projects."}</p>
+      </div>
+      <div className="lab-bento">
+        <AnimatedCard className="lab-card lab-card-large"><Rocket/><span>01</span><h3>{isAr?"Product Mindset":"Product Mindset"}</h3><p>{isAr?"ببدأ من هدف المشروع وتجربة المستخدم قبل شكل الزر والكارت.":"Starts from the product goal and user journey before colors and cards."}</p></AnimatedCard>
+        <AnimatedCard className="lab-card"><Layers/><span>02</span><h3>{isAr?"Visual System":"Visual System"}</h3><p>{isAr?"هوية واضحة، تباين محسوب، وحركة صغيرة تخدم المحتوى.":"A clear identity, measured contrast, and motion that supports the content."}</p></AnimatedCard>
+        <AnimatedCard className="lab-card"><BrainCircuit/><span>03</span><h3>{isAr?"AI Ready":"AI Ready"}</h3><p>{isAr?"مشاريع تقدر تربط موديلات، APIs، بيانات، وواجهات حقيقية.":"Projects ready for models, APIs, data, and real interfaces."}</p></AnimatedCard>
+        <AnimatedCard className="lab-card lab-card-wide"><Gauge/><span>04</span><h3>{isAr?"Fast by Design":"Fast by Design"}</h3><p>{isAr?"تأثيرات خفيفة على transform وopacity فقط، وسرعة على الموبايل قبل الديسكتوب.":"Light transform/opacity motion only, mobile speed before desktop decoration."}</p></AnimatedCard>
+        <AnimatedCard className="lab-card lab-card-training"><School/><span>05</span><h3>{isAr?"Programming & Robotics Trainer":"Programming & Robotics Trainer"}</h3><p>{isAr?"بدرّب طلاب في Tekatech على البرمجة والروبوتيكس بطريقة عملية ومبسطة.":"Training students at Tekatech in programming logic and robotics through practical sessions."}</p></AnimatedCard>
+      </div>
+    </section>
+
+    <section id="featured" className="section featured-showcase">
+      <div className="featured-copy">
+        <SectionLabel>{isAr?"Flagship Case Study":"Flagship Case Study"}</SectionLabel>
+        <h2 className="section-title">{isAr?"Ecosense AI كمنتج كامل: صورة، سينسورات، AI، Backend، وDashboard.":"Ecosense AI as a complete product: image, sensors, AI, backend, and dashboard."}</h2>
+        <p>{isAr?"يعرض Ecosense AI أقوى تجربة عملية في البورتفوليو: مشروع تخرج حقيقي يجمع Front-End وAI Integration وIoT Hardware وBackend Flow داخل منتج واحد.":"Ecosense AI is the flagship proof of work: a real graduation product combining front-end, AI integration, IoT hardware, and backend flow inside one product."}</p>
+        <div className="feature-pillars">
+          <span><Camera size={16}/>{isAr?"ESP32-CAM":"ESP32-CAM"}</span>
+          <span><BrainCircuit size={16}/>{isAr?"AI Diagnosis":"AI Diagnosis"}</span>
+          <span><Server size={16}/>{isAr?"Backend APIs":"Backend APIs"}</span>
+          <span><MonitorSmartphone size={16}/>{isAr?"React Dashboard":"React Dashboard"}</span>
+        </div>
+        <div className="feature-actions">
+          <button className="primary magnetic" onClick={()=>{playUiSound("open");setActiveProject(featuredProject)}}>{isAr?"افتح التفاصيل":"Open Case Study"}<MousePointerClick size={17}/></button>
+          <a className="secondary magnetic" href={featuredProject.url} target="_blank" rel="noreferrer">{t.visit}<ExternalLink size={17}/></a>
+        </div>
+      </div>
+      <div className="featured-visual premium-3d">
+        <span className="feature-orbit orbit-a"/>
+        <span className="feature-orbit orbit-b"/>
+        <BrowserFrame image={featuredProject.image} title={featuredProject.title} className="featured-browser" priority/>
+        <div className="featured-mini-stack">
+          {featuredProject.previewImages?.map((img,index)=><BrowserFrame key={img} image={img} title={`${featuredProject.title} preview ${index+1}`} className="floating-browser-mini"/>)}
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" className="section projects-section cinematic-projects">
+      <div className="section-head projects-head">
+        <div><SectionLabel>{t.projectsTitle}</SectionLabel><h2 className="section-title">{isAr?"مشاريع حقيقية مبنية للاستخدام الفعلي وليس للعرض فقط.":"Real projects built for actual use, not just for display."}</h2></div>
+        <div className="filter-pills">{projectFilters.map(filter=><button key={filter.key} className={activeFilter===filter.key?"active":""} onClick={()=>setActiveFilter(filter.key)}>{isAr?filter.ar:filter.en}</button>)}</div>
+      </div>
+      <div className="projects-grid">{filteredProjects.map((project,index)=>{
+        const featured = project.title === "Ecosense AI";
+        return <article className={`project-card premium-3d kinetic-card ${featured ? "featured-project" : ""}`} key={project.title} style={{"--card-i": index}}>
+          <div className="project-image project-browser-area"><span className="project-scan"/><span className="project-depth-badge">{featured ? "FEATURED / AI" : "LIVE CASE"}</span><BrowserFrame image={project.image} title={project.title} className="project-browser-frame" priority={featured}/>{project.previewImages&&<div className="project-previews mini-browser-previews">{project.previewImages.map((img,i)=><BrowserFrame key={img} image={img} title={`${project.title} ${i+1}`} className="mini-browser-frame"/>)}</div>}</div>
+          <div className="project-body"><span>{project.category}</span><h3>{project.title}</h3><div className="project-role-line"><Code2 size={15}/>{isAr?"الدور: UI/UX + Front-End + Integration + Deployment":"Role: UI/UX + Front-End + Integration + Deployment"}</div><p>{getProjectText(project,isAr,"Description")}</p><div className="case-study"><div><b>{t.caseLabels[0]}</b><p>{getProjectText(project,isAr,"Problem")}</p></div><div><b>{t.caseLabels[1]}</b><p>{getProjectText(project,isAr,"Solution")}</p></div><div><b>{t.caseLabels[2]}</b><p>{getProjectText(project,isAr,"Result")}</p></div></div><div className="stack">{project.stack.map(item=><b key={item}>{item}</b>)}</div><div className="project-links"><button onClick={()=>{playUiSound("open");setActiveProject(project)}}>{isAr?"تفاصيل المشروع":"Project Details"}<MousePointerClick size={16}/></button><a href={project.url} target="_blank" rel="noreferrer">{t.visit}<ExternalLink size={16}/></a></div></div>
+        </article>
+      })}</div>
     </section>
 
     <section id="about" className="section about-grid">
@@ -566,20 +705,6 @@ function App(){
       </div>
     </section>
 
-    <section id="projects" className="section projects-section cinematic-projects">
-      <div className="section-head projects-head">
-        <div><SectionLabel>{t.projectsTitle}</SectionLabel><h2 className="section-title">{isAr?"مشاريع حقيقية مبنية للاستخدام الفعلي وليس للعرض فقط.":"Real projects built for actual use, not just for display."}</h2></div>
-        <div className="filter-pills">{projectFilters.map(filter=><button key={filter.key} className={activeFilter===filter.key?"active":""} onClick={()=>setActiveFilter(filter.key)}>{isAr?filter.ar:filter.en}</button>)}</div>
-      </div>
-      <div className="projects-grid">{filteredProjects.map((project,index)=>{
-        const featured = project.title === "Ecosense AI";
-        return <article className={`project-card premium-3d kinetic-card ${featured ? "featured-project" : ""}`} key={project.title} style={{"--card-i": index}}>
-          <div className="project-image project-browser-area"><span className="project-scan"/><span className="project-depth-badge">{featured ? "FEATURED / AI" : "LIVE CASE"}</span><BrowserFrame image={project.image} title={project.title} className="project-browser-frame" priority={featured}/>{project.previewImages&&<div className="project-previews mini-browser-previews">{project.previewImages.map((img,i)=><BrowserFrame key={img} image={img} title={`${project.title} ${i+1}`} className="mini-browser-frame"/>)}</div>}</div>
-          <div className="project-body"><span>{project.category}</span><h3>{project.title}</h3><p>{getProjectText(project,isAr,"Description")}</p><div className="case-study"><div><b>{t.caseLabels[0]}</b><p>{getProjectText(project,isAr,"Problem")}</p></div><div><b>{t.caseLabels[1]}</b><p>{getProjectText(project,isAr,"Solution")}</p></div><div><b>{t.caseLabels[2]}</b><p>{getProjectText(project,isAr,"Result")}</p></div></div><div className="stack">{project.stack.map(item=><b key={item}>{item}</b>)}</div><div className="project-links"><button onClick={()=>setActiveProject(project)}>{isAr?"تفاصيل المشروع":"Project Details"}<MousePointerClick size={16}/></button><a href={project.url} target="_blank" rel="noreferrer">{t.visit}<ExternalLink size={16}/></a></div></div>
-        </article>
-      })}</div>
-    </section>
-
     <section id="reviews" className="section reviews-page">
       <div className="section-head"><div><SectionLabel>{t.reviewsTitle}</SectionLabel><h2 className="section-title">{isAr?"آراء مختصرة بتدي ثقة من غير زحمة في الصفحة.":"Short reviews that add trust without making the page crowded."}</h2></div></div>
       <div className="reviews-layout"><form className="review-form premium-3d" onSubmit={handleReviewSubmit}><Quote/><h3>{isAr?"ضيف تقييمك":"Add your review"}</h3><p>{isAr?"التقييمات متوصلة بـ Firebase وتظهر للزوار بعد الإرسال.":"Reviews are connected to Firebase and appear after submission."}</p><div className="form-row"><input value={reviewForm.name} onChange={e=>setReviewForm({...reviewForm,name:e.target.value})} placeholder={isAr?"اسمك":"Your name"}/><input value={reviewForm.role} onChange={e=>setReviewForm({...reviewForm,role:e.target.value})} placeholder={isAr?"الصفة / المشروع":"Role / project"}/></div><ReviewStars interactive value={reviewForm.rating} onChange={rating=>setReviewForm({...reviewForm,rating})}/><textarea value={reviewForm.text} onChange={e=>setReviewForm({...reviewForm,text:e.target.value})} placeholder={isAr?"اكتب تقييمك هنا":"Write your review here"} rows="4" required/><button className="primary" type="submit" disabled={sending}>{sending ? (isAr?"جاري الإرسال...":"Sending...") : (isAr?"إضافة التقييم":"Add Review")}<Star size={17}/></button>{reviewStatus && <div className={reviewStatus.includes("نجاح") || reviewStatus.includes("success") ? "form-status success" : "form-status warning"}><CheckCircle2 size={17}/>{reviewStatus}</div>}</form><div className="review-grid">{reviews.slice(0,6).map((review,index)=><AnimatedCard className="review-card" key={review.id || `${review.name}-${index}`}><Quote/><ReviewStars value={review.rating || 5}/><p>{review.text}</p><h3>{review.name}</h3><span>{review.role || (isAr?"زائر الموقع":"Website visitor")}</span></AnimatedCard>)}</div></div>
@@ -594,7 +719,7 @@ function App(){
 
     <section id="contact" className="section contact"><img className="contact-logo" src={profile.logo} alt="Amr Khaled logo" width="90" height="90"/><h2>{t.contactTitle}</h2><p>{t.contactSubtitle}</p><div className="contact-links"><a href={whatsappUrl} target="_blank" rel="noreferrer"><Phone/>WhatsApp</a><a href={`mailto:${profile.email}`}><Mail/>Email</a><a href={profile.github} target="_blank" rel="noreferrer"><GitHubIcon/>GitHub</a><a href={profile.linkedin} target="_blank" rel="noreferrer"><LinkedInIcon/>LinkedIn</a><a href={profile.facebook} target="_blank" rel="noreferrer"><FacebookIcon/>Facebook</a><a href={profile.instagram} target="_blank" rel="noreferrer"><InstagramIcon/>Instagram</a><a href={profile.tiktok} target="_blank" rel="noreferrer"><TikTokIcon/>TikTok</a></div></section>
 
-    {activeProject && <div className="project-modal" role="dialog" aria-modal="true" onClick={()=>setActiveProject(null)}><div className="project-modal-card" onClick={e=>e.stopPropagation()}><button className="modal-close" onClick={()=>setActiveProject(null)} aria-label="Close"><X/></button><div className="modal-browser-wrap"><BrowserFrame image={activeProject.image} title={activeProject.title} className="modal-browser-frame" priority/></div><div className="modal-content"><span className="badge"><Layers size={16}/>{activeProject.category}</span><h2>{activeProject.title}</h2><p>{getProjectText(activeProject,isAr,"Description")}</p><div className="modal-case"><div><b>{t.caseLabels[0]}</b><p>{getProjectText(activeProject,isAr,"Problem")}</p></div><div><b>{t.caseLabels[1]}</b><p>{getProjectText(activeProject,isAr,"Solution")}</p></div><div><b>{t.caseLabels[2]}</b><p>{getProjectText(activeProject,isAr,"Result")}</p></div></div><div className="stack">{activeProject.stack.map(item=><b key={item}>{item}</b>)}</div><a className="primary modal-link" href={activeProject.url} target="_blank" rel="noreferrer">{t.visit}<ExternalLink size={17}/></a></div></div></div>}
+    {activeProject && <div className="project-modal" role="dialog" aria-modal="true" onClick={()=>setActiveProject(null)}><div className="project-modal-card" onClick={e=>e.stopPropagation()}><button className="modal-close" onClick={()=>{playUiSound("tap");setActiveProject(null)}} aria-label="Close"><X/></button><div className="modal-browser-wrap"><BrowserFrame image={activeProject.image} title={activeProject.title} className="modal-browser-frame" priority/></div><div className="modal-content"><span className="badge"><Layers size={16}/>{activeProject.category}</span><h2>{activeProject.title}</h2><p>{getProjectText(activeProject,isAr,"Description")}</p><div className="modal-case"><div><b>{t.caseLabels[0]}</b><p>{getProjectText(activeProject,isAr,"Problem")}</p></div><div><b>{t.caseLabels[1]}</b><p>{getProjectText(activeProject,isAr,"Solution")}</p></div><div><b>{t.caseLabels[2]}</b><p>{getProjectText(activeProject,isAr,"Result")}</p></div></div><div className="stack">{activeProject.stack.map(item=><b key={item}>{item}</b>)}</div><a className="primary modal-link" href={activeProject.url} target="_blank" rel="noreferrer">{t.visit}<ExternalLink size={17}/></a></div></div></div>}
 
     <div className="scroll-progress" aria-hidden="true"><span style={{ width: `${scrollUi.progress}%` }}/></div>
     <button className={`back-to-top ${scrollUi.visible ? "is-visible" : ""}`} type="button" onClick={scrollToTop} aria-label={isAr ? "الرجوع لأول الصفحة" : "Back to top"}>
