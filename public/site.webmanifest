@@ -1,0 +1,13 @@
+{
+  "name": "Amr Khaled Abozeid Portfolio",
+  "short_name": "Amr Portfolio",
+  "description": "AI Engineer and Front-End Developer portfolio with React, Firebase, SEO, API integration, and IoT hardware projects.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070b14",
+  "theme_color": "#22d8a5",
+  "icons": [
+    { "src": "/images/amr-logo.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/images/amr-logo.webp", "sizes": "512x512", "type": "image/webp" }
+  ]
+}

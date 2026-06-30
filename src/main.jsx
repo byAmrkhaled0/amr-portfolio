@@ -5,7 +5,7 @@ import {
   Code2, Cpu, Send, Globe2, Trophy, BrainCircuit, Server, GraduationCap,
   ShieldCheck, Zap, Star, Quote, Target, Award, BadgeCheck, UserRound,
   MonitorSmartphone, Workflow, Gauge, Search, Download, Layers, Rocket,
-  CheckCircle2, MousePointerClick, Languages, Database, Camera, Wifi
+  CheckCircle2, MousePointerClick, Languages, Database, Camera, Wifi, ArrowUp
 } from "lucide-react";
 import "./styles.css";
 
@@ -54,7 +54,7 @@ const profile = {
   facebook: "https://www.facebook.com/amr.khaled.400310",
   instagram: "https://www.instagram.com/byamrkhaled/",
   tiktok: "https://www.tiktok.com/@3mor_03?is_from_webapp=1&sender_device=pc",
-  image: "/images/amr-khaled-hero.webp",
+  image: "/images/amr-profile-square.webp",
   logo: "/images/amr-logo.webp",
   whatsappMessage: "السلام عليكم اريد التواصل مع بشمهندس عمرو"
 };
@@ -226,6 +226,7 @@ function App(){
   const [reviewStatus,setReviewStatus] = useState("");
   const [activeFilter,setActiveFilter] = useState("all");
   const [activeProject,setActiveProject] = useState(null);
+  const [scrollUi,setScrollUi] = useState({ visible:false, progress:0 });
 
   const t = translations[lang] || translations.en;
   const isAr = lang === "ar";
@@ -326,6 +327,98 @@ function App(){
     document.body.classList.toggle("modal-open", Boolean(activeProject));
   },[activeProject]);
 
+  useEffect(()=>{
+    let ticking = false;
+    const updateScrollUi = () => {
+      const doc = document.documentElement;
+      const max = Math.max(doc.scrollHeight - window.innerHeight, 1);
+      const current = window.scrollY || doc.scrollTop || 0;
+      setScrollUi({
+        visible: current > 420,
+        progress: Math.min(100, Math.max(0, (current / max) * 100))
+      });
+      ticking = false;
+    };
+    const onScroll = () => {
+      if(!ticking){
+        ticking = true;
+        window.requestAnimationFrame(updateScrollUi);
+      }
+    };
+    updateScrollUi();
+    window.addEventListener("scroll", onScroll, { passive:true });
+    window.addEventListener("resize", onScroll, { passive:true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  },[]);
+
+  const scrollToTop = () => {
+    const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    window.scrollTo({ top:0, behavior: reduceMotion ? "auto" : "smooth" });
+  };
+
+  useEffect(()=>{
+    const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    if (reducedMotion) return;
+
+    const root = document.documentElement;
+    root.classList.add("motion-ready");
+
+    const selector = [
+      ".hero-content > .badge",
+      ".cinema-strip",
+      ".hero-title",
+      ".hero-content > p",
+      ".hero-actions",
+      ".trust-row",
+      ".metrics",
+      ".socials",
+      ".profile-card",
+      ".reveal-card",
+      ".project-card",
+      ".system-layer",
+      ".final-cta",
+      ".contact"
+    ].join(",");
+
+    const nodes = Array.from(document.querySelectorAll(selector))
+      .filter((node) => !node.closest(".project-modal"));
+
+    nodes.forEach((node, index) => {
+      node.classList.add("scroll-reveal");
+      node.style.setProperty("--reveal-i", String(Math.min(index % 6, 5)));
+    });
+
+    const makeVisible = (node) => {
+      node.classList.add("is-visible", "is-animating");
+      window.setTimeout(() => node.classList.remove("is-animating"), 850);
+    };
+
+    if (!("IntersectionObserver" in window)) {
+      nodes.forEach(makeVisible);
+      return () => root.classList.remove("motion-ready");
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          makeVisible(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+    nodes.forEach((node) => observer.observe(node));
+
+    return () => {
+      observer.disconnect();
+      nodes.forEach((node) => node.classList.remove("scroll-reveal", "is-visible", "is-animating"));
+      root.classList.remove("motion-ready");
+    };
+  }, [activeFilter, reviews.length, lang]);
+
   const goTo=(id)=>{ document.getElementById(id)?.scrollIntoView({behavior:"smooth"}); setMenuOpen(false); };
   const handleReviewSubmit=async(e)=>{
     e.preventDefault();
@@ -409,13 +502,7 @@ function App(){
       <aside className="profile-card premium-3d hero-cinematic hero-3d-stage" aria-label="Developer profile">
         <div className="hero-depth-grid" aria-hidden="true"/>
         <div className="developer-plate tilt-3d">
-          <div className="photo-wrap"><img src={profile.image} alt="Amr Khaled Abozeid" width="520" height="760" fetchPriority="high"/><div className="photo-caption"><img src={profile.logo} alt="logo" width="34" height="34"/><span>AI • Front-End • IoT</span></div></div>
-        </div>
-        <div className="hero-browser-stack tilt-3d">
-          <BrowserFrame image="/images/ecosense-frontend-live.webp" title="ecosense.ai/dashboard" className="hero-browser-main" priority/>
-          <div className="hero-code-card"><Code2 size={16}/><span>React UI</span><b>Clean</b></div>
-          <div className="hero-code-card hero-code-card-two"><BrainCircuit size={16}/><span>AI API</span><b>Live</b></div>
-          <div className="hero-code-card hero-code-card-three"><Cpu size={16}/><span>IoT</span><b>ESP32</b></div>
+          <div className="photo-wrap"><img src={profile.image} alt="Amr Khaled Abozeid" width="720" height="720" fetchPriority="high"/><div className="photo-caption"><img src={profile.logo} alt="logo" width="34" height="34"/><span>AI • Front-End • IoT</span></div></div>
         </div>
         <div className="hero-mini-panel">
           <div><span>{isAr?"واجهة":"Interface"}</span><b>Premium React</b></div>
@@ -509,6 +596,10 @@ function App(){
 
     {activeProject && <div className="project-modal" role="dialog" aria-modal="true" onClick={()=>setActiveProject(null)}><div className="project-modal-card" onClick={e=>e.stopPropagation()}><button className="modal-close" onClick={()=>setActiveProject(null)} aria-label="Close"><X/></button><div className="modal-browser-wrap"><BrowserFrame image={activeProject.image} title={activeProject.title} className="modal-browser-frame" priority/></div><div className="modal-content"><span className="badge"><Layers size={16}/>{activeProject.category}</span><h2>{activeProject.title}</h2><p>{getProjectText(activeProject,isAr,"Description")}</p><div className="modal-case"><div><b>{t.caseLabels[0]}</b><p>{getProjectText(activeProject,isAr,"Problem")}</p></div><div><b>{t.caseLabels[1]}</b><p>{getProjectText(activeProject,isAr,"Solution")}</p></div><div><b>{t.caseLabels[2]}</b><p>{getProjectText(activeProject,isAr,"Result")}</p></div></div><div className="stack">{activeProject.stack.map(item=><b key={item}>{item}</b>)}</div><a className="primary modal-link" href={activeProject.url} target="_blank" rel="noreferrer">{t.visit}<ExternalLink size={17}/></a></div></div></div>}
 
+    <div className="scroll-progress" aria-hidden="true"><span style={{ width: `${scrollUi.progress}%` }}/></div>
+    <button className={`back-to-top ${scrollUi.visible ? "is-visible" : ""}`} type="button" onClick={scrollToTop} aria-label={isAr ? "الرجوع لأول الصفحة" : "Back to top"}>
+      <ArrowUp size={21}/>
+    </button>
     <a className="floating-whatsapp" href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="WhatsApp"><Send size={22}/></a><footer>© {new Date().getFullYear()} Amr Khaled Abozeid. React Portfolio optimized for SEO and performance.</footer>
   </main>
 }
