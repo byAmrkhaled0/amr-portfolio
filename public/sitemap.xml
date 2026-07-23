@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://amr-portfolio-theta-five.vercel.app/</loc>
+    <loc>https://amrkhaledabozeid.vercel.app/</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://amr-portfolio-theta-five.vercel.app/images/amr-profile-square.webp</image:loc>
+      <image:loc>https://amrkhaledabozeid.vercel.app/images/amr-profile-square.webp</image:loc>
       <image:title>Eng Amr Khaled Portfolio Profile Photo</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://amr-portfolio-theta-five.vercel.app/images/ecosense-frontend-live.webp</image:loc>
+      <image:loc>https://amrkhaledabozeid.vercel.app/images/ecosense-frontend-live.webp</image:loc>
       <image:title>Ecosense AI React Dashboard Screenshot</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://amr-portfolio-theta-five.vercel.app/images/mahmoud-fawzy-science.webp</image:loc>
+      <image:loc>https://amrkhaledabozeid.vercel.app/images/mahmoud-fawzy-science.webp</image:loc>
       <image:title>Mahmoud Fawzy Science Platform Screenshot</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://amr-portfolio-theta-five.vercel.app/Amr-Khaled-CV.pdf</loc>
+    <loc>https://amrkhaledabozeid.vercel.app/Amr-Khaled-CV.pdf</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://amr-portfolio-theta-five.vercel.app/llms.txt</loc>
+    <loc>https://amrkhaledabozeid.vercel.app/llms.txt</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
