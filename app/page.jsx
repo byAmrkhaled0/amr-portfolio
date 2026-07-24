@@ -33,7 +33,9 @@ function getFirebaseDb() {
       import("firebase/app"),
       import("firebase/firestore")
     ]).then(([appModule, firestoreModule]) => {
-      const app = appModule.initializeApp(firebaseConfig);
+      const app = appModule.getApps().length
+        ? appModule.getApp()
+        : appModule.initializeApp(firebaseConfig);
       return {
         db: firestoreModule.getFirestore(app),
         firestore: firestoreModule
@@ -46,7 +48,7 @@ function getFirebaseDb() {
 const profile = {
   name: "Eng Amr Khaled",
   arabicName: "Eng Amr Khaled",
-  role: "AI Engineer, Front-End Developer & Programming/Robotics Trainer",
+  role: "Front-End Developer, AI Engineer & Programming/Robotics Trainer",
   phone: "01008454029",
   email: "amrk78420@gmail.com",
   github: "https://github.com/byAmrkhaled0",
@@ -56,7 +58,7 @@ const profile = {
   tiktok: "https://www.tiktok.com/@3mor_03?is_from_webapp=1&sender_device=pc",
   image: "/images/amr-profile-creative.jfif",
   logo: "/images/amr-logo.webp",
-  whatsappMessage: "السلام عليكم اريد التواصل مع بشمهندس عمرو"
+  whatsappMessage: "السلام عليكم يا بشمهندس عمرو، عندي فكرة مشروع وعايز أعرف أنسب طريقة لتنفيذها."
 };
 
 const languageNames = {
@@ -66,15 +68,15 @@ const languageNames = {
 const translations = {
   en: {
     dir: "ltr", chooseLang: "Language", nav: ["Home", "About", "Skills", "Services", "Projects", "Packages", "Reviews", "Certificates", "Contact"],
-    badge: "Senior Web Developer • Visual Designer • AI Engineer", title1: "Heavy code. Bold art.", title2: "Digital products with a signature.",
-    subtitle: "I craft fast, mobile-first React websites and digital platforms where precise engineering meets expressive visual design — from Mansoura to ambitious brands everywhere.",
+    badge: "Front-End Developer • AI Engineer • Creative Web Designer", title1: "Built with precision.", title2: "Designed to make an impact.",
+    subtitle: "I design and build fast, mobile-first websites and digital platforms that give brands a stronger presence and make every customer journey clearer.",
     ctaWork: "Explore Projects", ctaContact: "Start a Project", cv: "Download CV", codeRole: "AI Engineer + Front-End Developer",
-    highlights: ["Production websites", "AI + API integration", "Tekatech Trainer", "Real IoT hardware"],
-    stats: [{ n: "9+", label: "Live Projects" }, { n: "AI", label: "Graduation Product" }, { n: "IoT", label: "Real Hardware" }, { n: "AR/EN", label: "Bilingual" }],
-    aboutTitle: "Professional Profile", aboutHeading: "I combine clean UI, backend integration, AI thinking, and real hardware experience.",
-    about: "I’m Amr Khaled Abozeid, an Egyptian Computer & AI graduate from Mansoura. I work across front-end development, AI engineering, backend API integration, IoT sensor workflows, and I train students in programming and robotics at Tekatech.",
-    about2: "My strongest project is Ecosense AI: a smart plant-health platform that connects React frontend screens, Flask AI backend APIs, image-based diagnosis, ESP32-CAM workflow, and real sensor readings.",
-    bioTitle: "Short Professional Bio", bio: "Front-End Developer, AI Engineer, and Programming/Robotics Trainer at Tekatech, skilled in React, JavaScript, Python, Flask, REST APIs, Vercel, GitHub, ESP32-CAM, DHT sensors, soil-moisture sensors, LDR/light sensors, and real hardware wiring.",
+    highlights: ["Production-ready websites", "AI and API integration", "Programming trainer", "Hands-on IoT experience"],
+    stats: [{ n: "9+", label: "Live Projects" }, { n: "AI", label: "Smart Product" }, { n: "IoT", label: "Hardware Experience" }, { n: "AR/EN", label: "Bilingual UX" }],
+    aboutTitle: "About Me", aboutHeading: "Engineering discipline with a designer’s eye.",
+    about: "I’m Amr Khaled Abozeid, a Computer and Artificial Intelligence graduate based in Mansoura, Egypt. I build responsive front-end experiences, connect products to APIs and Firebase, and develop practical AI and IoT solutions.",
+    about2: "Ecosense AI reflects the way I work: understanding the full product, designing a clear user journey, integrating the technical layers, and delivering a polished experience ready to present and use.",
+    bioTitle: "Professional Summary", bio: "Front-End Developer and AI Engineer with practical experience in React, JavaScript, Python, Flask, REST APIs, Firebase, Vercel, GitHub and IoT workflows. I also teach programming and robotics through hands-on student projects.",
     skillsTitle: "Technical Stack", servicesTitle: "Services", packagesTitle: "Website Packages", chooseTitle: "Why Work With Me", projectsTitle: "Case Studies", reviewsTitle: "Client Reviews", certTitle: "Education & Certifications", hardwareTitle: "Real Hardware & IoT", aiTitle: "AI Experience",
     caseLabels: ["Problem", "Solution", "Result"], visit: "View Project", contactTitle: "Have an idea? Let’s build it properly.", contactSubtitle: "Send me a message and I’ll help you turn it into a fast, elegant, production-ready website or AI-powered product.",
     ai: "Ecosense AI combines plant image analysis, real sensor readings, ESP32-CAM, hardware wiring, React frontend dashboards, and Flask backend integration.",
@@ -82,15 +84,15 @@ const translations = {
   },
   ar: {
     dir: "rtl", chooseLang: "اللغة", nav: ["الرئيسية", "عني", "المهارات", "الخدمات", "الأعمال", "الباقات", "الآراء", "الشهادات", "تواصل"],
-    badge: "مبرمج مواقع • مصمم بصري • مهندس AI", title1: "كود تقيل. تصميم جريء.", title2: "منتجات رقمية ليها بصمة.",
-    subtitle: "عمرو خالد، مبرمج ومصمم مواقع في المنصورة. بحوّل الأفكار لمواقع React ومنصات رقمية سريعة على الموبايل، بهوية بصرية قوية وتنفيذ هندسي دقيق.",
+    badge: "مطور واجهات • مهندس ذكاء اصطناعي • مصمم مواقع", title1: "تنفيذ هندسي دقيق.", title2: "وتصميم يصنع فرقًا.",
+    subtitle: "أنا عمرو خالد، مطور ومصمم مواقع من المنصورة. أبني مواقع ومنصات رقمية سريعة ومتوافقة مع الهاتف، بهوية واضحة وتجربة تساعد الزائر يفهم خدمتك ويتواصل معك بسهولة.",
     ctaWork: "شاهد المشاريع", ctaContact: "ابدأ مشروع", cv: "تحميل CV", codeRole: "AI Engineer + Front-End Developer",
-    highlights: ["مواقع Production", "دمج AI + APIs", "مدرب Tekatech", "هاردوير IoT حقيقي"],
-    stats: [{ n: "9+", label: "مشاريع Live" }, { n: "AI", label: "مشروع تخرج" }, { n: "IoT", label: "هاردوير حقيقي" }, { n: "AR/EN", label: "عربي / إنجليزي" }],
-    aboutTitle: "نبذة احترافية", aboutHeading: "بجمع بين واجهة نظيفة، ربط باك إند، تفكير AI، وخبرة هاردوير حقيقي.",
-    about: "أنا عمرو خالد أبو زيد، خريج حاسبات وذكاء اصطناعي مصري من المنصورة. شغلي بين Front-End، هندسة AI، ربط APIs، ومسارات IoT والسينسورات، وبشتغل كمدرب برمجة وروبوتيكس في شركة Tekatech.",
-    about2: "أقوى مشروع عندي هو Ecosense AI: منصة ذكية لصحة النبات بتربط واجهات React وFlask AI APIs وتشخيص بالصور وESP32-CAM وقراءات سينسورات حقيقية.",
-    bioTitle: "سيرة مختصرة", bio: "Front-End Developer وAI Engineer ومدرب برمجة وروبوتيكس في Tekatech، متمكن من React وJavaScript وPython وFlask وREST APIs وVercel وGitHub وESP32-CAM وDHT وSoil Moisture وLDR وتوصيلات الهاردوير الحقيقي.",
+    highlights: ["مواقع جاهزة للاستخدام", "ربط الذكاء الاصطناعي والـAPIs", "تدريب برمجة عملي", "خبرة فعلية في IoT"],
+    stats: [{ n: "9+", label: "مشروعات منشورة" }, { n: "AI", label: "منتج ذكي" }, { n: "IoT", label: "خبرة هاردوير" }, { n: "AR/EN", label: "تجارب ثنائية اللغة" }],
+    aboutTitle: "من أنا؟", aboutHeading: "دقة المبرمج بعين مصمم يفهم تجربة المستخدم.",
+    about: "أنا عمرو خالد أبو زيد، خريج حاسبات وذكاء اصطناعي من المنصورة. أطور واجهات متجاوبة، وأربط المواقع بالـAPIs وFirebase، وأعمل على حلول عملية تجمع الويب والذكاء الاصطناعي وإنترنت الأشياء.",
+    about2: "مشروع Ecosense AI يلخص طريقة شغلي: أفهم المنتج كاملًا، أصمم رحلة استخدام واضحة، أربط الطبقات التقنية ببعضها، وأسلم تجربة نهائية احترافية قابلة للعرض والاستخدام.",
+    bioTitle: "ملخص مهني", bio: "مطور واجهات ومهندس ذكاء اصطناعي بخبرة عملية في React وJavaScript وPython وFlask وREST APIs وFirebase وVercel وGitHub ومسارات IoT، بالإضافة إلى تدريب الطلاب على البرمجة والروبوتيكس من خلال مشروعات تطبيقية.",
     skillsTitle: "المهارات التقنية", servicesTitle: "الخدمات", packagesTitle: "باقات تصميم المواقع", chooseTitle: "نقاط القوة", projectsTitle: "دراسات حالة", reviewsTitle: "آراء العملاء", certTitle: "التعليم والشهادات", hardwareTitle: "Real Hardware & IoT", aiTitle: "خبرة الذكاء الاصطناعي",
     caseLabels: ["المشكلة", "الحل", "النتيجة"], visit: "مشاهدة المشروع", contactTitle: "عندك فكرة؟ خلينا نبنيها صح.", contactSubtitle: "ابعتلي رسالة وأنا أساعدك تحولها لموقع سريع واحترافي أو منتج مدعوم بالذكاء الاصطناعي.",
     ai: "Ecosense AI يجمع تحليل صور النبات وقراءات سينسورات حقيقية وESP32-CAM وتوصيلات هاردوير وReact Dashboard وFlask Backend.",
@@ -199,11 +201,7 @@ const certificates = [
   { title:"Getting Started with Deep Learning", issuer:"NVIDIA", meta:"Certificate of Competency", icon:Trophy }
 ];
 
-const fallbackReviews = [
-  { name:"Business Client", role:"Website Owner", text:"Amr delivered a clean and professional website with strong attention to mobile experience.", rating:5 },
-  { name:"Project Teammate", role:"Graduation Project", text:"He handled frontend integration and AI project flow clearly and stayed focused on final delivery.", rating:5 },
-  { name:"Local Brand", role:"Client", text:"The website became clearer, faster, and easier for customers to understand.", rating:5 }
-];
+const fallbackReviews = [];
 
 function ReviewStars({ value = 5, interactive = false, onChange }) {
   return <div className={interactive ? "stars stars-clickable" : "stars"}>
@@ -846,7 +844,7 @@ function App(){
     <button className={`back-to-top ${scrollUi.visible ? "is-visible" : ""}`} type="button" onClick={scrollToTop} aria-label={isAr ? "الرجوع لأول الصفحة" : "Back to top"}>
       <ArrowUp size={21}/>
     </button>
-    <a className="floating-whatsapp" href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="WhatsApp"><Send size={22}/></a><footer>© {new Date().getFullYear()} Amr Khaled Abozeid. React Portfolio optimized for SEO and performance.</footer>
+    <a className="floating-whatsapp" href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="WhatsApp"><Send size={22}/></a><footer>{isAr ? `© ${new Date().getFullYear()} عمرو خالد أبو زيد — جميع الحقوق محفوظة.` : `© ${new Date().getFullYear()} Amr Khaled Abozeid — All rights reserved.`}</footer>
   </main>
 }
 

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://amr-developer-portfolio.basemngm.chatgpt.site"),
+  metadataBase: new URL("https://amrkhaledabozeid.vercel.app"),
   title: {
     default: "عمرو خالد | مبرمج ومصمم مواقع في المنصورة | React & AI",
     template: "%s | عمرو خالد — مبرمج مواقع في المنصورة",
